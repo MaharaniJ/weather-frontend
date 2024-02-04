@@ -7,8 +7,7 @@ function Main() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
   const [history, setHistory] = useState([]);
-  const apiUrl = "https://api.openweathermap.org/data/2.5/weather";
-  const apiKey = "11bbbd91670fb0afbaf4b9054cde3be1";
+  
 
   const changeSearch = (value) => {
     setSearch(value);
@@ -18,7 +17,7 @@ function Main() {
     if (search !== "") {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/weather?search=${search}`
+          `https://weatherapp-qzrz.onrender.com/api/weather?search=${search}`
           // `${apiUrl}?q=${search}&appid=${apiKey}`
         );
         console.log(response);
@@ -40,7 +39,7 @@ function Main() {
     if (data !== "") {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/weather?search=${data}`
+          `https://weatherapp-qzrz.onrender.com/api/weather?search=${data}`
           // `${apiUrl}?q=${data}&appid=${apiKey}`
           );
           console.log("second res",response)
