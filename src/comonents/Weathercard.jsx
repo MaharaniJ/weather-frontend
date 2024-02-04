@@ -44,7 +44,7 @@ const CountryWeatherInfo = () => {
 
   return (
     <div className="container-fluid">
-      <h1 className="mt-4">Weather Dashboard</h1>
+      <h1 className="mt-4 mb-3 ">Weather Dashboard</h1>
       {loading && <p>Loading...</p>}
       {error && <p className="alert alert-danger">{error}</p>}
       {data && (
