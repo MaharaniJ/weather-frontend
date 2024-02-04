@@ -53,7 +53,7 @@ const CountryWeatherInfo = () => {
           style={{
             maxWidth: "20rem",
             width: "100%",
-            height: "25rem",
+            
             backgroundImage: `url(${bgImage})`,
             backgroundSize: "cover",
             transition: "background-size 0.5s ease",
