@@ -49,7 +49,7 @@ const CountryWeatherInfo = () => {
       {error && <p className="alert alert-danger">{error}</p>}
       {data && (
         <div
-          className="card bg-info shadow-md mx-auto mt-5"
+          className="card bg-info shadow-md mx-auto mt-5 mb-5 "
           style={{
             maxWidth: "20rem",
             width: "100%",
