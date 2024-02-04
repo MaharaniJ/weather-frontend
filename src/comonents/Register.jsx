@@ -12,20 +12,23 @@ function Register() {
       return;
     }
     try {
-      const respones = await axios.post("https://weatherapp-qzrz.onrender.com/api/countries", {
-        name: countryName,
-      });
+      const respones = await axios.post(
+        "https://weatherapp-qzrz.onrender.com/api/countries",
+        {
+          name: countryName,
+        }
+      );
       const data = respones.data;
       console.log(data);
-      if (data.exists) {
-        // Country already exists, set the error message
-
-        alert("Country already exists");
-      } else {
-        // Country doesn't exist, you can proceed with saving or show a success message
+      if (data.status === 201 || data) {
+         // Country doesn't exist, you can proceed with saving or show a success message
+       
         alert("Country Stored successfully");
         navigate("/dropdown");
         setCountryName("");
+      } else {
+        // Country already exists, set the alert message
+        alert("Country updated");
       }
     } catch (error) {
       console.error("Error adding country:", error.message);
