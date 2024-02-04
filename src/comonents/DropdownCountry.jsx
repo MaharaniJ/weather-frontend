@@ -12,7 +12,7 @@ const CountrySelectionDropdown = () => {
     const fetchCountries = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:8000/api/countries/getall"
+          "https://weatherapp-qzrz.onrender.com/api/countries/getall"
         );
         const data = response.data;
         setCountries(data);

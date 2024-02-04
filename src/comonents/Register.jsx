@@ -12,7 +12,7 @@ function Register() {
       return;
     }
     try {
-      const respones = await axios.post("http://localhost:8000/api/countries", {
+      const respones = await axios.post("https://weatherapp-qzrz.onrender.com/api/countries", {
         name: countryName,
       });
       const data = respones.data;

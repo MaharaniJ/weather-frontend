@@ -22,7 +22,7 @@ const CountryWeatherInfo = () => {
           return;
         }
         const response = await axios.get(
-          `http://localhost:8000/api/countries/${selectedCountry}`
+          `https://weatherapp-qzrz.onrender.com/countries/${selectedCountry}`
         );
         const result = response.data;
         console.log(result);
